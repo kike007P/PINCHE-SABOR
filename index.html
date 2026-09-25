@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Botánica del Autor | Menú Minimalista</title>
+    <style>
+        :root {
+            --color-fondo: #121212;
+            --color-texto: #e0d8c3;
+            --color-dorado-1: #d4af37;
+            --color-dorado-2: #f3e5ab;
+            --color-dorado-3: #aa771c;
+            --color-blanco: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+            padding: 20px;
+        }
+
+        .logo-emblem {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.9));
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, var(--color-dorado-2) 0%, var(--color-dorado-1) 40%, var(--color-dorado-3) 80%, var(--color-dorado-2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 2px 10px rgba(212, 175, 55, 0.15);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .eslogan {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--color-dorado-2);
+            max-width: 500px;
+            letter-spacing: 1.5px;
+            opacity: 0.9;
+        }
+
+        .menu-section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .categoria-titulo {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .subcategoria-titulo {
+            font-size: 1.2rem;
+            color: var(--color-dorado-2);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 3px solid var(--color-dorado-1);
+            padding-left: 10px;
+        }
+
+        .platillo-container {
+            margin-bottom: 25px;
+        }
+
+        .platillo {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .nombre-platillo {
+            font-weight: bold;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            color: var(--color-blanco);
+            letter-spacing: 1px;
+        }
+
+        .precio {
+            font-weight: bold;
+            font-size: 1.05rem;
+            white-space: nowrap;
+        }
+
+        .descripcion {
+            font-size: 0.9rem;
+            color: #b5b0a1;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #0b0b0b;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 8px 0;
+            color: #b5b0a1;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            .eslogan {
+                font-size: 1rem;
+            }
+            .menu-section {
+                padding: 30px 15px;
+            }
+            .platillo {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+            }
+            .precio {
+                align-self: flex-end;
+                margin-top: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <img src="logo.png" alt="La Botánica del Autor" class="logo-emblem">
+        <h1 class="gold-text">La Botánica del Autor</h1>
+        <p class="eslogan">Donde la naturaleza se vuelve arte en el plato.</p>
+    </header>
+
+    <section id="menu" class="menu-section">
+        
+        <!-- ENTRADAS -->
+        <h2 class="categoria-titulo gold-text">Entradas</h2>
+        
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Tiradito Nikkei de Atún</span><span class="precio gold-text">Q 65</span></div>
+            <p class="descripcion">Atún fresco en finas láminas, leche de tigre cítrica con toques de soya y jengibre, cebollín crocante[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Croquetas de Jamón Ibérico y Manchego</span><span class="precio gold-text">Q 48</span></div>
+            <p class="descripcion">Bechamel cremosa envuelta en pan panko, servida con alioli de ajo negro[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Bao de Cerdo Confitado</span><span class="precio gold-text">Q 52</span></div>
+            <p class="descripcion">Pan al vapor relleno de cerdo braseado en salsa hoisin, pepino encurtido y cilantro[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Hummus de Remolacha con Pan Pita Tostado</span><span class="precio gold-text">Q 42</span></div>
+            <p class="descripcion">Garbanzo y remolacha asada, tahini, aceite de oliva ahumado y semillas de granada[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Carpaccio de Res al Parmesano Trufado</span><span class="precio gold-text">Q 68</span></div>
+            <p class="descripcion">Res añejada en finas láminas, rúcula silvestre, láminas de parmesano y aceite de trufa[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Camarones Bandidos</span><span class="precio gold-text">Q 95</span></div>
+            <p class="descripcion">Camarones salteados con soya y chiles, montadas sobre una canasta crocante de mozzarella[cite: 9].</p>
+        </div>
+
+        <!-- PLATOS FUERTES -->
+        <h2 class="categoria-titulo gold-text">Platos Fuertes</h2>
+        
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Filete de pescado en salsa de maracuyá</span><span class="precio gold-text">Q 75</span></div>
+            <p class="descripcion">Filete marinado y salteado, bañado en salsa agridulce de maracuyá[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Short Rib Braseado en Salsa de Tamarindo</span><span class="precio gold-text">Q 165</span></div>
+            <p class="descripcion">Costilla de res cocida a baja temperatura por 12 horas, puré de camote y vegetales de temporada glaseados[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Salmón en Costra de Miso y Ajonjolí</span><span class="precio gold-text">Q 148</span></div>
+            <p class="descripcion">Salmón sellado con glaseado de miso, arroz de coco jazmín y bok choy salteado[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Risotto de Hongos Silvestres y Trufa Negra</span><span class="precio gold-text">Q 118</span></div>
+            <p class="descripcion">Arroz arborio cremoso, mezcla de hongos, aceite de trufa y parmesano curado 24 meses[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Pollo al Curry Verde Thai con Arroz Jazmín</span><span class="precio gold-text">Q 105</span></div>
+            <p class="descripcion">Pechuga de pollo en salsa de curry verde, leche de coco, berenjena y albahaca tailandesa[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Pasta al Ragú de Cordero y Especias</span><span class="precio gold-text">Q 132</span></div>
+            <p class="descripcion">Tagliatelle casera, cordero cocido a fuego lento con comino, canela y ras el hanout[cite: 9].</p>
+        </div>
+
+        <!-- POSTRES -->
+        <h2 class="categoria-titulo gold-text">Postres</h2>
+        
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Tarta de Matcha y Chocolate Blanco</span><span class="precio gold-text">Q 45</span></div>
+            <p class="descripcion">Base crocante de galleta, ganache de matcha y chocolate blanco, polvo de té verde[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Crème Brûlée de Maracuyá</span><span class="precio gold-text">Q 42</span></div>
+            <p class="descripcion">Crema francesa infusionada con maracuyá, costra de azúcar caramelizada[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Mochi Helado de Coco y Mango</span><span class="precio gold-text">Q 38</span></div>
+            <p class="descripcion">Pequeñas esferas de mochi rellenas de helado artesanal, servidas con salsa de mango[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Fondant de Chocolate Oscuro y Sal de Mar</span><span class="precio gold-text">Q 48</span></div>
+            <p class="descripcion">Centro líquido de chocolate al 70%, helado de vainilla y escamas de sal de mar[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Mousse de plátano con cobertura</span><span class="precio gold-text">Q 48</span></div>
+            <p class="descripcion">Mousse de plátano maduro, glaseado con chocolate temperado, acompañado de salsa de arándanos y pecanas picadas[cite: 9].</p>
+        </div>
+
+        <!-- BEBIDAS -->
+        <h2 class="categoria-titulo gold-text">Bebidas</h2>
+
+        <h3 class="subcategoria-titulo">Cócteles de Autor</h3>
+        
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Meridiano Sour</span><span class="precio gold-text">Q 58</span></div>
+            <p class="descripcion">Whisky, jengibre, limón, clara de huevo y bitters de naranja[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Mule de Maracuyá</span><span class="precio gold-text">Q 52</span></div>
+            <p class="descripcion">Vodka, maracuyá fresco, lima y cerveza de jengibre[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Negroni de Hibisco</span><span class="precio gold-text">Q 60</span></div>
+            <p class="descripcion">Gin, campari, vermouth rojo infusionado con flor de jamaica[cite: 9].</p>
+        </div>
+
+        <h3 class="subcategoria-titulo">Sin Alcohol</h3>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Limonada de Albahaca y Jengibre</span><span class="precio gold-text">Q 28</span></div>
+            <p class="descripcion">Limón fresco, albahaca, jengibre y agua mineral[cite: 9].</p>
+        </div>
+
+        <div class="platillo-container">
+            <div class="platillo"><span class="nombre-platillo">Agua de Jamaica con Menta</span><span class="precio gold-text">Q 24</span></div>
+            <p class="descripcion">Infusión fría de flor de jamaica, menta fresca y un toque de miel[cite: 9].</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p class="gold-text" style="font-size: 1.2rem; margin-bottom: 5px;"><strong>La Botánica del Autor</strong></p>
+            <p style="font-style: italic; margin-bottom: 20px;">Experiencia Gastronómica de Vanguardia</p>
+            
+            <p>📍 <strong>Dirección:</strong> 4ª Calle Poniente #18, Antigua Guatemala</p>
+            <p>📞 <strong>Teléfono:</strong> +502 7832-4590</p>
+            <p>✉️ <strong>Correo:</strong> contacto@botanicadelautor.com</p>
+            <p style="margin-top: 15px;"><span class="gold-text">Instagram & Facebook:</span> @botanicadelautor</p>
+        </div>
+    </footer>
+
+</body>
+</html>
